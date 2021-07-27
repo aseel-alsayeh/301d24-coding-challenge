@@ -11,6 +11,20 @@ Hint: You can use the array function reverse
 const reverseString = (str) => {
     // Solution code here...
 
+    var splitString = str.split(""); // var splitString = "hello".split("");
+    // ["h", "e", "l", "l", "o"]
+ 
+    // Step 2. Use the reverse() method to reverse the new created array
+    var reverseArray = splitString.reverse(); // var reverseArray = ["h", "e", "l", "l", "o"].reverse();
+    // ["o", "l", "l", "e", "h"]
+ 
+    // Step 3. Use the join() method to join all elements of the array into a string
+    var joinArray = reverseArray.join(""); // var joinArray = ["o", "l", "l", "e", "h"].join("");
+    // "olleh"
+    
+    //Step 4. Return the reversed string
+    return joinArray; // "olleh"
+
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -26,7 +40,15 @@ Output: ['a','b','c','d','e','f']
 
 const addInTheMiddle = (arr, val) => {
     // Solution code here...
+    
+    let middle=parseInt(arr.length/2)
+    if (parseInt(arr.length/2)!== (arr.length/2)) {
+        middle=middle+1
+    }
+    arr.splice(middle,0,val)
+    
 
+    return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
